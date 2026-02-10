@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our complete collection of delicious, tested recipes. Find your next favorite dish.">
+    <title>All Recipes - FlavorLoop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">🍳</div>
+                    <span class="logo-text">FlavorLoop</span>
+                </a>
+                
+                <div class="nav-links desktop-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="recipes.html" class="nav-link active">Recipes</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="mobile-nav" id="mobileNav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="recipes.html" class="nav-link active">Recipes</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>All Recipes</h1>
+                <p>Browse our complete collection of delicious, tested recipes</p>
+            </div>
+        </section>
+
+        <!-- Search and Filters -->
+        <section class="section">
+            <div class="container">
+                <div class="search-filter-box">
+                    <!-- Search Bar -->
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search search-icon"></i>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="search-input" 
+                            placeholder="Search by recipe name or ingredient..."
+                        >
+                    </div>
+
+                    <!-- Filters -->
+                    <div class="filter-header">
+                        <i class="fas fa-sliders-h"></i>
+                        <span>Filters:</span>
+                    </div>
+
+                    <div class="filter-grid">
+                        <div class="filter-group">
+                            <label for="categoryFilter">Category</label>
+                            <select id="categoryFilter" class="filter-select">
+                                <option value="All">All Recipes</option>
+                                <option value="Breakfast">Breakfast</option>
+                                <option value="Dinner">Lunch & Dinner</option>
+                                <option value="Healthy">Healthy</option>
+                                <option value="Desserts">Desserts</option>
+                                <option value="Quick Meals">Quick Meals</option>
+                                <option value="Vegan">Vegan</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="difficultyFilter">Difficulty</label>
+                            <select id="difficultyFilter" class="filter-select">
+                                <option value="All">All Levels</option>
+                                <option value="Easy">Easy</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Hard">Hard</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="timeFilter">Cooking Time</label>
+                            <select id="timeFilter" class="filter-select">
+                                <option value="All">Any Time</option>
+                                <option value="Under 30">Under 30 min</option>
+                                <option value="30-60">30-60 min</option>
+                                <option value="Over 60">Over 60 min</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Count -->
+                <div class="results-count">
+                    Showing <span id="resultsCount">0</span> recipe<span id="resultPlural">s</span>
+                </div>
+
+                <!-- Recipe Grid -->
+                <div class="recipe-grid" id="recipesGrid">
+                    <!-- Recipes will be loaded here -->
+                </div>
+
+                <!-- No Results Message -->
+                <div class="no-results" id="noResults" style="display: none;">
+                    <p>No recipes found matching your criteria.</p>
+                    <button class="btn btn-primary" onclick="clearFilters()">Clear Filters</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="section">
+            <div class="container">
+                <div class="newsletter-box">
+                    <i class="fas fa-envelope newsletter-icon"></i>
+                    <h2 class="newsletter-title">Get Fresh Recipes Delivered to Your Inbox</h2>
+                    <p class="newsletter-subtitle">Join our community and receive weekly recipes, cooking tips, and exclusive content.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Enter your email" required class="newsletter-input">
+                        <button type="submit" class="btn btn-white">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">🍳</div>
+                        <span class="logo-text">FlavorLoop</span>
+                    </a>
+                    <p class="footer-description">
+                        Discover delicious recipes, one flavor at a time. Easy, tasty, and tested recipes for every meal, mood, and moment.
+                    </p>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1-839-392-3920</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>idea@flavourloop.in</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                    <h3 class="mt-6">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 FlavorLoop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="recipes-data.js"></script>
+    <script src="script.js"></script>
+    <script src="recipes-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View detailed recipe instructions, ingredients, and cooking tips.">
+    <title>Recipe Detail - FlavorLoop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">🍳</div>
+                    <span class="logo-text">FlavorLoop</span>
+                </a>
+                
+                <div class="nav-links desktop-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="recipes.html" class="nav-link active">Recipes</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="mobile-nav" id="mobileNav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="recipes.html" class="nav-link active">Recipes</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Back Button -->
+        <section class="section" style="padding-bottom: 0;">
+            <div class="container">
+                <a href="recipes.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to Recipes</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Recipe Header -->
+        <section class="section" style="padding-top: 1rem;">
+            <div class="container">
+                <div class="recipe-detail-grid" id="recipeHeader">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Ingredients and Instructions -->
+        <section class="section bg-gray-light" style="padding-top: 2rem;">
+            <div class="container">
+                <div class="recipe-content-grid" id="recipeContent">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Recipes -->
+        <section class="section" id="relatedSection" style="display: none;">
+            <div class="container">
+                <h2 class="section-title" style="text-align: left; font-size: 1.875rem;">You Might Also Like</h2>
+                <div class="recipe-grid" id="relatedRecipes">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="section">
+            <div class="container">
+                <div class="newsletter-box">
+                    <i class="fas fa-envelope newsletter-icon"></i>
+                    <h2 class="newsletter-title">Get Fresh Recipes Delivered to Your Inbox</h2>
+                    <p class="newsletter-subtitle">Join our community and receive weekly recipes, cooking tips, and exclusive content.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Enter your email" required class="newsletter-input">
+                        <button type="submit" class="btn btn-white">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">🍳</div>
+                        <span class="logo-text">FlavorLoop</span>
+                    </a>
+                    <p class="footer-description">
+                        Discover delicious recipes, one flavor at a time. Easy, tasty, and tested recipes for every meal, mood, and moment.
+                    </p>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1-839-392-3920</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>idea@flavourloop.in</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                    <h3 class="mt-6">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 FlavorLoop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="recipes-data.js"></script>
+    <script src="script.js"></script>
+    <script src="recipe-detail.js"></script>
+</body>
+</html>
